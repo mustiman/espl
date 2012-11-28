@@ -52,6 +52,7 @@ int main(int argc, char **argv) {
 	fseek(tochange, diff.offset, SEEK_SET );
 	ch[0] = (char)getc(tochange);
 	if (!reverse){
+	  	  printf("ch[0] = %d   diff.new = %d\n",ch[0],diff.new);
 	  if (ch[0] == diff.old){
 	    fseek(tochange, diff.offset, SEEK_SET );
 	    fwrite( &diff.new,1,1,tochange);
@@ -60,7 +61,6 @@ int main(int argc, char **argv) {
 	    }
 	  }
 	}else{
-	  printf("ch[0] = %d   diff.new = %d\n",ch[0],diff.new);
 	  if (ch[0] == diff.new){
 	    fseek(tochange, diff.offset, SEEK_SET );
 	    fwrite( &diff.old,1,1,tochange);

@@ -8,7 +8,6 @@ int main(int argc, char **argv) {
     FILE *tochange;
     struct diff diff;
     char line[128];
-    fpos_t file_pos;
     char ch[1]={'a'};
     int message = 0;
     char c;
