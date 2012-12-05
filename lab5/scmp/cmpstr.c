@@ -1,0 +1,17 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+
+int cmpstr(char *first, char *second) {
+  int i=0;
+  while(1){
+    if(first[i] == 0 || first[i]!=second[i])
+      break;
+    i++;
+  }
+  if(first[i]>second[i]) return 1;
+  if(first[i]<second[i]) return 2;
+  else
+    return 0;
+
+}

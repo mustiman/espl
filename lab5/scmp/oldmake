@@ -1,0 +1,15 @@
+
+.PHONY: all clean
+
+all: scmp
+
+scmp: scmp.o cmpstr.o
+	gcc -m32 scmp.o cmpstr.o -o scmp 
+
+scmp.o: scmp.c 
+	gcc -Wall -c -g -m32 -O0 scmp.o
+cmpstr.o:cmpstr.c
+	gcc -Wall -c  -g -m32 -O0 cmpstr.o 
+
+
+ 
