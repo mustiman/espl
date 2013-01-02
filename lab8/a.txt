@@ -1,0 +1,10 @@
+a.txt
+a.txt~
+esplsh
+esplsh.c
+esplsh.c~
+esplsh.o
+makefile
+makefile~
+ompere floppy 22040 Dec 27 11:26 esplsh
+-rw-r--r-- 1 tompere floppy  3781 Dec 27 11:32 esplsh.c
