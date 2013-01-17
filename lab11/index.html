@@ -1,0 +1,59 @@
+<html>
+	<head>
+  		<title>MyWeb</title>
+	  <link rel="stylesheet" type="text/css" href="web.css" />
+	  <script>
+	    function validateForm()
+	    {
+	    var x=document.forms["myForm"]["username"].value;
+	    var y=document.forms["myForm"]["password"].value;
+	    if (x==null || x=="" || y==null || y=="")
+	      {
+	      alert("Username and Password must be filled out");
+	      return false;
+	      }
+	      else if( y.length<5){
+	      alert("Password must be more than 4 chars");
+	      return false;
+	      }
+	    }
+	    function validPass(){
+	        if(event.keyCode > 48 && event.keyCode < 57){
+		  event.returnValue = false;
+	      }
+	    }
+	    </script>
+	</head>
+	<body bgcolor="brown">
+	  <div class="right_side">
+	  <form name="myForm" action="http://www.cs.bgu.ac.il/nabedas/remote_service_name.php"
+	      onsubmit="return validateForm()">
+	    Username:
+	    <input type=text name="username" onkeypress="validPass()"/>
+	    Password:
+	    <input type=text name="password"/>
+	    <button type="submit" name="submit"> submit </button> 
+	  </form>
+	  </div>
+	  <div class="right_side">
+	  <br> Suggestions: <br>  <hr/>
+	  </div>
+	  <div class = "left_side" style=" width: 1000px; height: 450px;">
+	    <u> <font size="20">Tal</font></u>
+	    <p>
+	      i love computers!
+	    </p>
+	    <hr>
+	  </div>
+	  <div class = "right_side" style="height: 450px;">
+	    <img src="1.jpg" border = 12>
+	  </div>
+	  <div class="center_side" style="height: 1050px;">
+		Regular text. 	
+		<a href = "http:/google.com">
+ 		This is a link.</a>
+		<font face="Arial">
+		Text in Arial font</font>
+	</div>
+	</body>
+</html>
