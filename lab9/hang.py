@@ -15,8 +15,5 @@ while(turns > 0):
   var = raw_input("Enter something: ")
   g_letters.append(var)
   gussed = [c in g_letters and c or '-' for c in letters]
+  turns-=1;
   print gussed
-#while(turns >0):
-#  
-#  for c in line:
-#   print "-%c-" %c
